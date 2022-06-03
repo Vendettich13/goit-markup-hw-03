@@ -37,11 +37,14 @@ a{
     background-color: var(--main-bgc);
     padding-top: 24px;
     padding-bottom: 25px;
+    border-bottom: 1px solid #ECECEC;
 }
+
 .container{
     width: 1200px;
     padding: 0% 15px;
     margin:  0 auto;
+    
 }
 .nav-link.current{
     color: var(--accent);
@@ -58,6 +61,25 @@ a{
 span{
     color: var(--span-black);
 }
+.site-nav{
+    display: flex;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    margin-left: 93px;
+    margin-right: auto;
+}
+.nav .item{
+    margin-right: 50px;
+}
+.nav-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.nav .item:last-child{
+    margin-right: 0;
+}
 .nav-link {
     font-weight: 500;
     font-size: 14px;
@@ -69,6 +91,17 @@ span{
 .link:focus{
 color: var(--accent);
 }
+.auth{
+    display: flex;
+    margin-left: auto;
+}
+.auth .item + .item{
+    margin-left: 50px;
+}
+.auth-header-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .auth-header-link{
     font-weight: 500;
     font-size: 14px;
@@ -76,12 +109,16 @@ color: var(--accent);
     letter-spacing: 0.02em;
     color: var(--secondary-color);
 }
+/* -------------SECTION------------------ */
+section{
+        padding-top: 94px;
+        padding-bottom: 94px;
+}
 /* ---------------------------HERO------------------------ */
 .hero{
     background-color: #2F303A;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+
 }
 .hero-title{
     font-weight: 900;
@@ -92,6 +129,10 @@ color: var(--accent);
     text-transform: uppercase;
     color: var(--white-page-color);
     margin-bottom: var(--typical-margin);
+}
+.hero-button{
+    width: 200px;
+    height: 50px;
 }
 .hero-button{
     font-family: inherit;
@@ -127,18 +168,28 @@ color: var(--accent);
     color: var(--main-text-color);
     margin-bottom: 10px;
 }
-.features{
-    padding-top: 0;
-    padding-bottom: 94px;
-}
 .feature-text{
+    min-width: 270px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
-    margin-bottom: 10px;
+    
 }
+.feature-list{
+    display: flex;
+
+}
+.feature-list .title:nth-child(-n + 3){
+    margin-right: 30px;
+}
+    
 /* -------------------------WORK-------------------------------------- */
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 .work-title, .team-title{
     font-weight: 700;
     font-size: 36px;
@@ -150,15 +201,26 @@ color: var(--accent);
 }
 .work{
     padding-top: 0;
-    padding-bottom: 94px;
+}
+.work-list{
+    display: flex;
+}
+.work-list .title-item:nth-child(-n + 2){
+    margin-right: 30px;
 }
 /* ------------------------------------TEAM------------------------ */
 .team{
     background-color: #F5F4FA;
-    padding-top: 0;
-    padding-bottom: 94px;
+    padding-top: 94px;
+}
+.team-item{
+    background: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
 }
 .pre-team-text{
+    
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -167,18 +229,29 @@ color: var(--accent);
     color: var(--main-text-color);
 }
 .post-team-text{
+    
         font-size: 16px;
         line-height: 1.10;
         text-align: center;
         letter-spacing: 0.03em;
         color: var(--secondary-color);
 }
+.team-list{
+    display: flex;
+}
+.team-list .team-item:nth-child(-n + 3){
+    margin-right: 30px;
+}
+.description-team{
+    padding: 30px 0;
+    
+}
 /* ------------------------------------FOOTER------------------------- */
 .footer-logo{
     color: var(--white-page-color);
 }
 .footer-logo-link{
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 }
 .footer{
@@ -195,7 +268,7 @@ color: var(--accent);
     margin-bottom: 9px;
 }
 .auth-footer-link{
-    display: inline-block;
+    display: block;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -206,6 +279,10 @@ color: var(--accent);
 
 /* ------------------------BUTTONS-------------------------- */
 .radio-btn{
+    padding: 6px 22px;
+    border: 0;
+    min-width: 73px;
+    border-radius: 4px;
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -214,14 +291,37 @@ color: var(--accent);
     letter-spacing: 0.03em;
     color: var(--main-text-color);
     background-color: #F5F4FA;
+    margin-bottom: 50px;
+}
+.buttons-list .item:nth-child(-n + 4){
+    margin-right: 8px;
 }
 .radio-btn:hover,
 .radio-btn:focus{
     color: var(--white-page-color);
     background-color: var(--accent);
 }
+.buttons-list{
+    display: flex;
+    justify-content: center;
+}
 /* ------------------------------CARDS---------------------- */
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+.card-item{
+    height: 404px;
+    width: calc(100% / 3 - 30px);
+    margin: 15px;
+    
+    
+}
 .pre-img-text{
+
+    
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.00;
@@ -229,12 +329,17 @@ color: var(--accent);
     color: var(--main-text-color);
 }
 .post-img-text{
+    
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: var(--secondary-color);
 }
-.main{
-    padding-top: 94px;
-    padding-bottom: 94px;
+.description-card{
+    padding: 20px 24px;
+    border: 1px;
+    border-top: 0;
+    border-color: #EEEEEE;
+    border-style: solid;
+    background-color: var(--main-bgc);
 }
